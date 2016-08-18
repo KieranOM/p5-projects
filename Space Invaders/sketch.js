@@ -77,7 +77,7 @@ function mouseClicked() {
 	// Get the current time
 	var time = new Date().getTime();
 	// If it has been 1 second since the last shot...
-	if (time - lastShot >= 500) {
+	if (time - lastShot >= 250) {
 		// Shoot a bullet
 		player.shoot();
 		// Reset the cooldown

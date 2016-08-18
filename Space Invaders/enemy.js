@@ -5,8 +5,35 @@ function Enemy(x) {
 	this.y = -80;
 
 	this.draw = function() {
+
+		// Body
 		fill(192, 57, 43);
-		rect(this.x, this.y, 60, 60);
+		rect(this.x+20, this.y, 20, 10);
+		rect(this.x+10, this.y+10, 40, 10);
+		rect(this.x, this.y+20, 60, 30);
+		rect(this.x+10, this.y+50, 10, 10);
+		rect(this.x+40, this.y+50, 10, 10);
+
+		// Body shading
+		fill(154, 46, 34);
+		rect(this.x+20, this.y, 3, 10);
+		rect(this.x+10, this.y+10, 3, 10);
+		rect(this.x, this.y+20, 3, 30);
+		rect(this.x+10, this.y+50, 3, 10);
+		rect(this.x+40, this.y+50, 3, 10);
+
+		// Body lighting
+		fill(230, 68, 52);
+		rect(this.x+37, this.y, 3, 10);
+		rect(this.x+47, this.y+10, 3, 10);
+		rect(this.x+57, this.y+20, 3, 30);
+		rect(this.x+17, this.y+50, 3, 10);
+		rect(this.x+47, this.y+50, 3, 10);
+
+		// Eyes
+		fill(0);
+		rect(this.x+10, this.y+30, 10, 10);
+		rect(this.x+40, this.y+30, 10, 10);
 	}
 
 	this.update = function() {
