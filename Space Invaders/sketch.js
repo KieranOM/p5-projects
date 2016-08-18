@@ -26,13 +26,10 @@ function draw() {
 		// Update the current enemy
 		enemy.update();
 
-		// If they're off-screen...
-		if (enemy.y >= height-60) {
-			// Clear all the enemies
-			enemies = [];
-			// Tell the user their score and reset
-			alert("You scored: " + points);
-			points = 0;
+		// If they hit the player
+		if (enemy.hitsPlayer()) {
+			// End the game
+			endGame();
 			break;
 		} else {
 			// Otherwise, if they were hit by a bullet
@@ -92,4 +89,12 @@ function addRow() {
 	}
 	// Reset the last row y co-ord.
 	lastRowY = -80;
+}
+
+function endGame() {
+	// Clear all the enemies
+	enemies = [];
+	// Tell the user their score and reset
+	alert("You scored: " + points);
+	points = 0;
 }

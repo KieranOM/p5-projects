@@ -61,4 +61,10 @@ function Enemy(x) {
 
 	}
 
+	this.hitsPlayer = function() {
+		// Detects if it would hit it from the Y co-ordinate
+		// Only needs Y as otherwise it be unreachable
+		return this.y+60 >= player.y;
+	}
+
 }
